@@ -1,0 +1,15 @@
+{
+  "name": "Sama",
+  "version": "1.0.0",
+  "description": "Meeting site",
+  "main": "server.js",
+  "author": "Romain Testard",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "knex": "^0.16.5"
+  }
+}

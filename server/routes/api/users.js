@@ -65,4 +65,18 @@ router.get('/:id/messages', (req, res) => {
     });
 });
 
+// @route GET api/users/:id/all
+// @desc GET all messages & medias from a user by id
+// @access Public
+router.get('/:id/all', (req, res) => {
+  knex('users')
+    .join('messages', 'users.id', '=', 'messages.senderId')
+    .join('media', 'users.id', '=', 'media.userId')
+    .where({ 'users.id': req.params.id })
+    .select()
+    .then(data => {
+      res.send(data);
+    });
+});
+
 module.exports = router;

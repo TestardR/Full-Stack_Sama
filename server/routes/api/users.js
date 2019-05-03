@@ -22,8 +22,21 @@ const knex = require('knex')(config);
 // @desc Test route
 // @access Public
 
-router.get('/', (req, res) => {
+router.get('/test', (req, res) => {
   res.send('User route');
+});
+
+// @route GET api/users
+// @desc GET all users route
+// @access Public
+
+router.get('/', (req, res) => {
+  knex
+    .select()
+    .from('users')
+    .then(data => {
+      res.send(data);
+    });
 });
 
 module.exports = router;

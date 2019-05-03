@@ -5,7 +5,7 @@ const router = express.Router();
 // @desc Test route
 // @access Public
 
-router.get('/', (req, res) => {
+router.get('/test', (req, res) => {
   res.send('Media route');
 });
 

@@ -6,10 +6,8 @@ export default class Landing extends Component {
       <section className="landing">
         <div className="dark-overlay">
           <div className="landing-inner">
-            <h1 className="x-large">Sama</h1>
-            <p className="lead">
-              Consult users, messages, and media posted on our site
-            </p>
+            <h1 className="x-large samaFont">Sama</h1>
+            <p className="lead">Consult users, messages, and media</p>
           </div>
         </div>
       </section>

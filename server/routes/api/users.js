@@ -22,6 +22,19 @@ router.get('/', (req, res) => {
   knex
     .select()
     .from('users')
+    .orderBy('id')
+    .then(data => {
+      res.send(data);
+    });
+});
+
+// @route GET api/users/:id
+// @desc GET a user by id
+// @access Public
+router.get('/:id', (req, res) => {
+  knex('users')
+    .where({ id: req.params.id })
+    .select()
     .then(data => {
       res.send(data);
     });

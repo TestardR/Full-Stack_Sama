@@ -27,4 +27,16 @@ router.get('/', (req, res) => {
     });
 });
 
+// @route GET api/messages/:id
+// @desc GET a message by id
+// @access Public
+router.get('/:id', (req, res) => {
+  knex('messages')
+    .where({ id: req.params.id })
+    .select()
+    .then(data => {
+      res.send(data);
+    });
+});
+
 module.exports = router;

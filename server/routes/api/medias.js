@@ -27,4 +27,16 @@ router.get('/', (req, res) => {
     });
 });
 
+// @route GET api/medias/:id
+// @desc GET a media by id
+// @access Public
+router.get('/:id', (req, res) => {
+  knex('media')
+    .where({ id: req.params.id })
+    .select()
+    .then(data => {
+      res.send(data);
+    });
+});
+
 module.exports = router;

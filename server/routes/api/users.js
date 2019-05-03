@@ -1,14 +1,29 @@
-import express from 'express';
+const express = require('express');
+const router = express.Router();
 
-const app = express();
+// DB setup
+const env = 'development';
+const config = require('../../knexfile')[env];
+const knex = require('knex')(config);
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
+// knex
+//   .from('users')
+//   .select()
+//   .then(result => {
+//     console.log(result);
+//     knex.destroy();
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     knex.destroy();
+//   });
 
-const port = process.env.PORT || 5000;
+// @route GET api/users/test
+// @desc Tests users route
+// @access Public
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+// router.get('/', (req, res) => {
+//   res.json({ msg: 'Users Works' });
+// });
+
+module.exports = router;

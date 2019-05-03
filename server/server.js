@@ -1,13 +1,20 @@
 const express = require('express');
+// const bodyParser = require('body-parser');
 
 const app = express();
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
+// Basic route for testing
+app.get('/', (req, res) => res.send('API Running'));
+
+// API
+const users = require('./routes/api/users');
+
+// Body parser middleware
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+
+// Use Routes to connect
+// app.use('/api/users', users);
 
 const port = process.env.PORT || 5000;
 

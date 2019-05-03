@@ -6,18 +6,6 @@ const env = 'development';
 const config = require('../../db/knexfile')[env];
 const knex = require('knex')(config);
 
-// knex
-//   .from('users')
-//   .select()
-//   .then(result => {
-//     console.log(result);
-//     knex.destroy();
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     knex.destroy();
-//   });
-
 // @route GET api/users
 // @desc Test route
 // @access Public

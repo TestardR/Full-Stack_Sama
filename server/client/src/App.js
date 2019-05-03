@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
+import Navbar from './components/layout/Navbar';
+import Landing from './components/layout/Landing';
 
 const App = () => {
-  return <h1>Sama</h1>;
+  return (
+    <Fragment>
+      <Navbar />
+      <Landing />
+    </Fragment>
+  );
 };
 
 export default App;

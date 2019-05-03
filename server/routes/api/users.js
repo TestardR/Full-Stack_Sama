@@ -17,7 +17,6 @@ router.get('/test', (req, res) => {
 // @route GET api/users
 // @desc GET all users route
 // @access Public
-
 router.get('/', (req, res) => {
   knex
     .select()
@@ -39,5 +38,22 @@ router.get('/:id', (req, res) => {
       res.send(data);
     });
 });
+
+// @route GET api/users/:id/medias
+// @desc GET all medias from a user by id
+// @access Public
+router.get('/:id/medias', (req, res) => {
+  knex('users')
+    .join('media', 'users.id', '=', 'media.userId')
+    .where({ 'users.id': req.params.id })
+    .select()
+    .then(data => {
+      res.send(data);
+    });
+});
+
+// @route GET api/users/:id/messages
+// @desc GET all messages from a user by id
+// @access Public
 
 module.exports = router;

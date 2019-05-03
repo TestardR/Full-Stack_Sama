@@ -13,8 +13,10 @@ const users = require('./routes/api/users');
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 
-// Use Routes to connect
-// app.use('/api/users', users);
+// Define routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/messages', require('./routes/api/messages'));
+app.use('/api/medias', require('./routes/api/medias'));
 
 const port = process.env.PORT || 5000;
 

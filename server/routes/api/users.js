@@ -18,12 +18,12 @@ const knex = require('knex')(config);
 //     knex.destroy();
 //   });
 
-// @route GET api/users/test
-// @desc Tests users route
+// @route GET api/users
+// @desc Test route
 // @access Public
 
-// router.get('/', (req, res) => {
-//   res.json({ msg: 'Users Works' });
-// });
+router.get('/', (req, res) => {
+  res.send('User route');
+});
 
 module.exports = router;

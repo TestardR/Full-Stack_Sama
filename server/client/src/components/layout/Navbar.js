@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
     return (
       <nav className="navbar bg-dark">
         <h1>
-          <a href="index.html" className="samaFont">
+          <Link to="/" className="samaFont">
             <i className="fa fa-universal-access" /> Sama
-          </a>
+          </Link>
         </h1>
         <ul>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
           <li>
             <a href="profiles.html">Users</a>
           </li>

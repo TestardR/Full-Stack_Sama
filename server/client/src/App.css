@@ -330,6 +330,22 @@ button {
   margin-right: 0.6rem;
 }
 
+/*  Footer */
+.p-4 {
+  padding: 1.5rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 /* Landing Page */
 .landing {
   position: relative;

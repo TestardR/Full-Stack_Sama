@@ -2,12 +2,20 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../common/Spinner';
-import { getProfiles } from '../../actions/profile';
+import { getUsers } from '../../actions/userActions';
 
-const UserItem = props => {
+const Users = ({ getUsers }) => {
+  useEffect(() => {
+    getUsers();
+  }, [getUsers]);
   return <div />;
 };
 
-UserItem.propTypes = {};
+Users.propTypes = {
+  getUsers: PropTypes.func.isRequired
+};
 
-export default UserItem;
+export default connect(
+  null,
+  { getUsers }
+)(Users);

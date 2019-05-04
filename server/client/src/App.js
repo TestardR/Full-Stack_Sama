@@ -10,6 +10,7 @@ import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Dashboard from './components/dashboard/Dashboard';
 import Footer from './components/layout/Footer';
+import Users from './components/users/Users';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route exact path="/" component={Landing} />
           <div className="container">
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/users" component={Users} />
           </div>
           <Footer />
         </div>

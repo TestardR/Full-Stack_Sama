@@ -15,7 +15,7 @@ class Navbar extends Component {
             <Link to="/dashboard">Dashboard</Link>
           </li>
           <li>
-            <a href="profiles.html">Users</a>
+            <Link to="/users">Users</Link>
           </li>
           <li>
             <a href="posts.html">Messages</a>

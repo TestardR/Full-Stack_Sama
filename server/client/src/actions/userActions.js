@@ -6,14 +6,14 @@ import { GET_USERS, USER_LOADING } from './types';
 export const getUsers = () => dispatch => {
   dispatch(setUserLoading());
   axios
-    .get(`/api/users`)
+    .get('/api/users')
     .then(res =>
       dispatch({
         type: GET_USERS,
         payload: res.data
       })
     )
-    .catch(err =>
+    .catch(
       dispatch({
         type: GET_USERS,
         payload: null

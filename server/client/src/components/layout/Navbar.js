@@ -6,7 +6,7 @@ class Navbar extends Component {
       <nav className="navbar bg-dark">
         <h1>
           <a href="index.html" className="samaFont">
-            <i class="fa fa-universal-access" /> Sama
+            <i className="fa fa-universal-access" /> Sama
           </a>
         </h1>
         <ul>

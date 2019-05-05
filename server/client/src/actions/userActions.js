@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import { GET_USERS, USER_LOADING } from './types';
+import { GET_USERS, USER_LOADING, GET_USER } from './types';
 
-// Get all Profiles
+// Get all Users
 export const getUsers = () => dispatch => {
   dispatch(setUserLoading());
   axios
@@ -19,6 +19,22 @@ export const getUsers = () => dispatch => {
         payload: null
       })
     );
+};
+
+// Get a user
+export const getUser = id => async dispatch => {
+  try {
+    const res = await axios.get(`/api/users/${id}`);
+    dispatch({
+      type: GET_USER,
+      payload: res.data
+    });
+  } catch (err) {
+    dispatch({
+      type: GET_USER,
+      payload: { status: err.response.status }
+    });
+  }
 };
 
 // Profile loading

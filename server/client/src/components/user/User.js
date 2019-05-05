@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Spinner from '../common/Spinner';
 import UserMedia from './UserMedia';
 import { getUser } from '../../actions/userActions';
+import UserContent from './UserContent';
 
 const User = ({ getUser, user: { user, loading }, match }) => {
   useEffect(() => {
@@ -25,6 +26,16 @@ const User = ({ getUser, user: { user, loading }, match }) => {
           </Link>
           <div className="profile-grid my-1">
             <UserMedia user={user} />
+          </div>
+          <div className="large text-primary">Content</div>
+          <p className="lead">
+            <i className="fab fa-connectdevelop" /> See all the posted messages
+          </p>
+          <Link to="/users" className="btn btn-light">
+            Back To Users
+          </Link>
+          <div className="profile-grid my-1">
+            <UserContent user={user} />
           </div>
         </Fragment>
       )}

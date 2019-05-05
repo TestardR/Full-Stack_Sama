@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../App.css';
 import newId from '../../utils/newid';
 
-class UserTop extends Component {
+class UserMedia extends Component {
   componentWillMount() {
     this.id = newId();
   }
@@ -23,4 +23,4 @@ class UserTop extends Component {
   }
 }
 
-export default UserTop;
+export default UserMedia;

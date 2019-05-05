@@ -17,7 +17,7 @@ const UserItem = ({ user: { id, username, name, country, city, url } }) => {
         {city}
       </p>
       <Link to={`/users/${id}`} className="btn btn-primary">
-        <i className="fa fa-universal-access" /> View User
+        <i className="fa fa-universal-access" /> View Media
       </Link>
     </div>
   );

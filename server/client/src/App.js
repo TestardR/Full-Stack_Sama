@@ -11,6 +11,7 @@ import Landing from './components/layout/Landing';
 import Dashboard from './components/dashboard/Dashboard';
 import Footer from './components/layout/Footer';
 import Users from './components/users/Users';
+import User from './components/user/User';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <div className="container">
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/users" component={Users} />
+            <Route exact path="/users/:id" component={User} />
           </div>
           <Footer />
         </div>

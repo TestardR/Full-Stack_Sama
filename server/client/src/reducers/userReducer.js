@@ -1,7 +1,7 @@
 import { GET_USERS, USER_LOADING, GET_USER } from '../actions/types';
 
 const initialState = {
-  users: [],
+  users: null,
   user: null,
   loading: false
 };

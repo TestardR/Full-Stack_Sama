@@ -21,20 +21,23 @@ export const getUsers = () => dispatch => {
     );
 };
 
-// Get a user
-export const getUser = id => async dispatch => {
-  try {
-    const res = await axios.get(`/api/users/${id}`);
-    dispatch({
-      type: GET_USER,
-      payload: res.data
-    });
-  } catch (err) {
-    dispatch({
-      type: GET_USER,
-      payload: { status: err.response.status }
-    });
-  }
+// Get a user by id
+export const getUser = userId => dispatch => {
+  dispatch(setUserLoading());
+  axios
+    .get(`/api/users/${userId}`)
+    .then(res =>
+      dispatch({
+        type: GET_USER,
+        payload: res.data
+      })
+    )
+    .catch(
+      dispatch({
+        type: GET_USER,
+        payload: null
+      })
+    );
 };
 
 // Profile loading

@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import '../../App.css';
 
-const UserItem = ({ user: { id, username, name, country, city } }) => {
-  console.log(id, username, country, city);
+const UserItem = ({ user: { id, username, name, country, city, url } }) => {
+  // console.log(id, username, country, city, url);
   return (
     <div className="profile bg-light">
-      <span>
+      <img src={url} alt="" className="round-img profiles-img" />
+      <div>
         <strong>{username}</strong>
         <div>{name}</div>
-      </span>
+      </div>
       <p className="my-1">
         {country}
         <br />

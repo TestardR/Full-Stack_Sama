@@ -4,10 +4,9 @@ import PropTypes from 'prop-types';
 import '../../App.css';
 
 const UserItem = ({ user: { id, username, name, country, city, url } }) => {
-  // console.log(id, username, country, city, url);
+  console.log(id, username);
   return (
     <div className="profile bg-light">
-      <img src={url} alt="" className="round-img profiles-img" />
       <div>
         <strong>{username}</strong>
         <div>{name}</div>

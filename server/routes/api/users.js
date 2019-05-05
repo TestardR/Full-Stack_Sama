@@ -21,7 +21,6 @@ router.get('/', (req, res) => {
   knex
     .select()
     .from('users')
-    .join('media', 'users.id', '=', 'media.userId')
     .orderBy('id')
     .then(data => {
       res.send(data);

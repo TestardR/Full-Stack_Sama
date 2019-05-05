@@ -21,7 +21,7 @@ const Users = ({ getUsers, user: { users, loading } }) => {
           </p>
           <div className="profiles">
             {users == null ? (
-              <h4>Loading...</h4>
+              <Spinner />
             ) : (
               users.map(user => <UserItem key={user.id} user={user} />)
             )}

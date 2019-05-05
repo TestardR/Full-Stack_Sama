@@ -25,7 +25,7 @@ export const getUsers = () => dispatch => {
 export const getUser = userId => dispatch => {
   dispatch(setUserLoading());
   axios
-    .get(`/api/users/${userId}`)
+    .get(`/api/users/${userId}/all`)
     .then(res =>
       dispatch({
         type: GET_USER,

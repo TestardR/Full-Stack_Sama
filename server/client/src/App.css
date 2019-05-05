@@ -372,7 +372,7 @@ button {
 /* Profiles Page */
 .profile {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 0.5fr;
   align-items: center;
   /* grid-gap: 2rem; */
   padding: 1rem;
@@ -510,6 +510,21 @@ button {
   color: #aaa;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
+}
+
+.userMedia {
+  border-radius: 50%;
+  width: 50%;
+}
+
+.userMediaTemplate {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  /* grid-gap: 2rem; */
+  padding: 1rem;
+  /* line-height: 1.8; */
+  margin-bottom: 1rem;
 }
 
 /* Mobile Styles */
